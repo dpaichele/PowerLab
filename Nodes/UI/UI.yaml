@@ -231,5 +231,123 @@ Children:
       Type: DynamicLink
       DataType: NodePath
       Value: "/Objects/PowerLab@BrowseName"
+  - Name: TextBox1
+    Type: TextBox
+    Children:
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Value: {"LocaleId":"en-US","Text":"Power and Motion Lab"}
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 210.0
+    - Name: Height
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 40.0
+    - Name: FontSize
+      Type: BaseDataVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 20.0
+  - Name: DateAndTime1
+    Type: DateTimePicker
+    Children:
+    - Name: Value
+      Type: BaseDataVariableType
+      DataType: DateTime
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../ClockLogic/Time"
+        Children:
+        - Name: Mode
+          Type: BaseVariableType
+          DataType: DynamicLinkMode
+          ModellingRule: Optional
+          Value: 2
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 253.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 10.0
+    - Name: ClockLogic
+      Type: NetLogic
+      WriteMask: BrowseName|DataType|Description|DisplayName|MinimumSamplingInterval|UserAccessLevel
+      Children:
+      - Name: Time
+        Type: BaseDataVariableType
+        DataType: DateTime
+        Children:
+        - Name: Year
+          Type: BaseDataVariableType
+          DataType: Int32
+        - Name: Month
+          Type: BaseDataVariableType
+          DataType: Int32
+        - Name: Day
+          Type: BaseDataVariableType
+          DataType: Int32
+        - Name: Hour
+          Type: BaseDataVariableType
+          DataType: Int32
+        - Name: Minute
+          Type: BaseDataVariableType
+          DataType: Int32
+        - Name: Second
+          Type: BaseDataVariableType
+          DataType: Int32
+      - Name: UTCTime
+        Type: BaseDataVariableType
+        DataType: DateTime
+        Children:
+        - Name: Year
+          Type: BaseDataVariableType
+          DataType: Int32
+        - Name: Month
+          Type: BaseDataVariableType
+          DataType: Int32
+        - Name: Day
+          Type: BaseDataVariableType
+          DataType: Int32
+        - Name: Hour
+          Type: BaseDataVariableType
+          DataType: Int32
+        - Name: Minute
+          Type: BaseDataVariableType
+          DataType: Int32
+        - Name: Second
+          Type: BaseDataVariableType
+          DataType: Int32
+      - Name: ns=7;LibraryReference
+        Type: ObjectLibraryReference
+        DataType: ObjectLibraryReferenceDataType
+        ModellingRule: None
+        Value: 
+         {
+          "TypeId": {
+           "Id": 72,
+           "Namespace": 7
+          },
+          "Body": {
+           "libraryGuid": "f0701375ee41467993d632db6a8fdaa5",
+           "objectGuid": "9996e8e9dc11a5c3e3631c6fb9425d2d",
+           "objectVersion": 1,
+           "highestIgnoredVersion": 0
+          }
+         }
+    - Name: InputFormat
+      Type: BaseDataVariableType
+      DataType: DateTimePickerInputFormatEnum
+      ModellingRule: Optional
 - File: Screens/Screens.yaml
 - File: SettingsWidgets/SettingsWidgets.yaml
